@@ -247,3 +247,14 @@ p{color:var(--slate)}
 .proj-card figcaption{padding:14px 16px}
 .proj-card figcaption b{display:block;color:var(--navy);font-size:1rem}
 .proj-card figcaption span{color:var(--slate);font-size:.85rem}
+/* Photo gallery + lightbox */
+.photo-grid{columns:4 240px;column-gap:14px}
+.photo-grid .ph{break-inside:avoid;display:block;width:100%;margin:0 0 14px;padding:0;border:0;background:none;cursor:zoom-in;border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+.photo-grid .ph img{width:100%;display:block;border-radius:10px;transition:.25s ease}
+.photo-grid .ph:hover img{transform:scale(1.04)}
+@media(max-width:900px){.photo-grid{columns:3 200px}}
+@media(max-width:600px){.photo-grid{columns:2 150px}}
+.lightbox{position:fixed;inset:0;background:rgba(10,15,30,.93);display:none;align-items:center;justify-content:center;z-index:200;padding:20px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:95%;max-height:92%;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb-close{position:absolute;top:16px;right:26px;color:#fff;font-size:2.6rem;line-height:1;cursor:pointer;font-weight:300}
